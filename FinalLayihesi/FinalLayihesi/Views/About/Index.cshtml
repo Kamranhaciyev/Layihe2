@@ -1,0 +1,144 @@
+﻿@model ViewModelAbout
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="header-third-part">
+    <div class="container">
+        <h1>About Us</h1>
+    </div>
+</section>
+<main>
+    <section id="about-main-second-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <span class="pre-title m-0">@Model.About.Pretitle</span>
+                    <h2><span class="featured">@Model.About.Title1</span> @Model.About.Title2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia. <b>Mauris lacus tellus, ultrices eu volutpat sit amet, finibus a ipsum.</b> Nullam sit amet pretium felis.</p>
+                    <p>Curabitur convallis, diam a egestas iaculis, neque lorem interdum felis, in viverra lacus tortor in leo.</p>
+                    <p>Donec tristique diam id mi venenatis facilisis eget sed mi. Phasellus malesuada nulla diam, a dignissim quam congue et.</p>
+                    <p><b>Cras sem ante, accumsan quis sem sed, rutrum varius nunc.</b></p>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="cards mt-5 mt-lg-0">
+                        <ul class="list-group list-group-flush">
+                            @foreach (var item in Model.AboutCards)
+                            {
+                                <li class="list-group-item d-flex justify-content-center align-items-center item-color">
+                                    <a href="#"><i class="@item.Icon"></i></a>
+                                    <div class="list-group-content">
+                                        <h4 style="margin: 0">@item.Title</h4>
+                                        <p>@item.Description</p>
+                                    </div>
+                                </li>
+                            }
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-main-third-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 pe-md-5">
+                    <span class="pre-title m-0">@Model.Results.Pretitle</span>
+                    <h2><span class="featured">@Model.Results.Title1</span> @Model.Results.Title2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</p>
+                    <p>Mauris lacus tellus, ultrices eu volutpat sit amet, finibus a ipsum.</p>
+                    <p>Curabitur convallis, diam a egestas iaculis, neque lorem interdum felis, in viverra lacus tortor in leo.</p>
+                    <blockquote>Donec tristique diam id mi venenatis facilisis eget sed mi. Phasellus malesuada nulla diam, a dignissim quam.</blockquote>
+                </div>
+                <div class="col-12 col-md-6 pe-md-5">
+                    <div class="row">
+                        @foreach (var item in Model.ResultCards.Take(2))
+                        {
+                            <div data-aos="fade-up" class="col-12 col-md-6 p-0 pe-md-4 mb-2 item">
+                                <span class="numbers">@item.Numbers</span>
+                                <h4>@item.Title</h4>
+                                <p>@item.Description</p>
+                            </div>
+                        }
+                        
+                    </div>
+                    <div class="row">
+                         @foreach (var item in Model.ResultCards.Skip(2))
+                        {
+                            <div data-aos="fade-up" class="col-12 col-md-6 p-0 pe-md-4 mb-2 item">
+                                <span class="numbers">@item.Numbers</span>
+                                <h4>@item.Title</h4>
+                                <p>@item.Description</p>
+                            </div>
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main-third-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="span-about mt-5 mb-4">ABOUT THE NETWORK</span>
+                    <h2><span class="span-h2"> The</span> Company</h2>
+                    <p class="mt-4">
+                        For 12 years we have been providing audit and warranty,
+                        financial advice, risk advice, taxes and related services to
+                        select clients.
+                    </p>
+                    <div class="row" style="padding-bottom: 100px">
+                        <div class="col-md-6">
+                            <h4><i class="me-2 fas fa-certificate"></i>Tradition</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4><i class="me-2 fas fa-lock"></i>Security</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4><i class="me-2 far fa-sticky-note"></i>Certificate</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4><i class="me-2 fas fa-graduation-cap"></i>Expertise</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 p-0 image">
+                    <img src="~/images/about-3.jpg" alt="about-3" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-main-fourth-part">
+        <div class="container">
+            <div class="row text-center intro">
+                <div class="col-12">
+                    <span class="pre-title m-auto">Customer Testimonials</span>
+                    <h2>Trusted <span>Feedback</span></h2>
+                    <p class="text-max-800">We work intensively in search of ideals that can add up in the lives of our customers. This is what moves us and we are grateful for the recognition.</p>
+                </div>
+            </div>
+            <div class="owl-carousel owl-theme">
+                @foreach (var item in Model.Testimonials)
+                {
+                    <div class="row card">
+                        <div class="col-12">
+                            <div class="item">
+                                <img src="~/images/about/@item.Image" alt="Logo" style="width: 50%;" class="logo">
+                                <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan orci rhoncus at pellentesque.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,71 @@
+﻿
+@model List<User>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Users</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <a asp-area="admin" asp-controller="user" asp-action="create" class="btn btn-primary">Create</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+
+                            <th>AddedDate</th>
+
+
+
+
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{int i = 0; }
+                        @foreach (var item in Model)
+                        {
+                            i++;
+                            <tr>
+                                <td>@i</td>
+                                <td>
+                                    <img src="~/Uploads/Images/@item.Image" alt="image" width="100" />
+                                </td>
+
+                                <td>@item.Name</td>
+                                <td>@item.Surname</td>
+                                <td>@item.UserName</td>
+                                <td>@item.Email</td>
+
+                                <td>@item.AddedDate</td>
+
+                                <td>
+                                    <a asp-area="admin" asp-controller="user" asp-action="update" asp-route-id="@item.Id">Update</a>
+                                    <a asp-area="admin" asp-controller="user" asp-action="delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure?')">Delete</a>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->

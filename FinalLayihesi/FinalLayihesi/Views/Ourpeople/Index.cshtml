@@ -1,0 +1,85 @@
+﻿@model ViewModelTeam
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="header-third-part">
+    <div class="container">
+        <h1>Our People</h1>
+    </div>
+</section>
+<main>
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 align-self-top text-center text-md-left text">
+                    <div class="row text-center intro">
+                        <div class="col-12">
+                            <span class="pre-title m-auto">We like what we do</span>
+                            <h2><span>Team</span> of Experts</h2>
+                        </div>
+                    </div>
+                    <div class="row items text-left">
+                        <div class="col-12 col-md-6">
+                            @foreach (var item in Model.Teams.Take(2))
+                            {
+                                <div class="row">
+                                    <div class="col-4 p-0 pe-3 mb-4 align-self-center">
+                                        <img src="~/images/team/@item.Image" alt="Person" class="person">
+                                    </div>
+                                    <div class="col-8 align-self-center text-left" style="text-align: left;">
+                                        <h4>@item.Name @item.Surname</h4>
+                                        <p>@item.Profession</p>
+                                        <p>@item.Description</p>
+                                        <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            }
+                            
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row">
+
+                                @foreach (var item in Model.Teams.Skip(2))
+                                {
+                                    <div class="row">
+                                        <div class="col-4 p-0 pe-3 mb-4 align-self-center">
+                                            <img src="~/images/team/@item.Image" alt="Person" class="person">
+                                        </div>
+                                        <div class="col-8 align-self-center text-left" style="text-align: left;">
+                                            <h4>@item.Name @item.Surname</h4>
+                                            <p>@item.Profession</p>
+                                            <p>@item.Description</p>
+                                            <ul class="navbar-nav ml-auto">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,143 @@
+﻿@model ViewModelServices 
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <section id="process-management">
+        <div class="container full">
+            <div class="row text-center intro">
+                <div class="col-12">
+                    <span class="pre-title">How it works in practice</span>
+                    <h2><span>Process</span> Management</h2>
+                    <p style="margin-left: 20%; margin-right: 20%;">We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish as planned.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center text-center items">
+                @foreach (var item in Model.Process)
+                {
+                    <div class="col-12 col-md-6 col-lg-2 item">
+                        <div class="number"><span>0 @item.Number</span></div>
+                        <h4>@item.Title</h4>
+                        <p>@item.Description</p>
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </section>
+    <section id="excellence">
+        <div class="container">
+            <div class="row intro">
+                <div class="col-12 col-md-9">
+                    <span class="pre-title m-auto ms-md-0">Our business areas</span>
+                    <h2 class="mb-0">Excellence in <span>Services</span></h2>
+                </div>
+                <div class="col-12 col-md-3 align-self-end">
+                    <a href="#contact" class="smooth-anchor btn mx-auto mr-md-0 ml-md-auto outline-button">GET IN TOUCH</a>
+                </div>
+            </div>
+            <div class="row justify-content-center items">
+                @foreach (var item in Model.Businesses)
+                {
+                    <div data-aos="fade-up" class="col-12 col-md-6 item">
+                        <div class="card mt-5">
+                            <i class="icon @item.Icon"></i>
+                            <h4>@item.Title</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.</p>
+                            <p>Curabitur convallis, diam a egestas iaculis, neque lorem interdum felis, in viverra lacus tortor in leo.</p>
+                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </section>
+    <section id="message">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 pe-5">
+                    <div class="col-12 p-0">
+                        <span class="pre-title m-0">Send a message</span>
+                        <h2>Get in <span>Touch</span></h2>
+                        <p>We will respond to your message as soon as possible.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 p-0">
+                            <form action="php/form.php" id="nexgen-simple-form" class="nexgen-simple-form">
+                                <input type="hidden" name="section" value="nexgen_form">
+
+                                <input type="hidden" name="reCAPTCHA">
+                                <div class="row form-group-margin">
+                                    <div class="col-12 col-md-6 m-0 p-2">
+                                        <input type="text" name="name" class="form-control field-name" placeholder="Name">
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 p-2">
+                                        <input type="email" name="email" class="form-control field-email" placeholder="Email">
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 p-2">
+                                        <input type="text" name="phone" class="form-control field-phone" placeholder="Phone">
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 p-2">
+                                        <i class="icon-arrow-down mr-3"></i>
+                                        <select name="info" class="form-control field-info">
+                                            <option value="" selected disabled>More Info</option>
+                                            <option>Audit & Assurance</option>
+                                            <option>Financial Advisory</option>
+                                            <option>Analytics and M&A</option>
+                                            <option>Middle Marketing</option>
+                                            <option>Legal Consulting</option>
+                                            <option>Regulatory Risk</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 m-0 p-2">
+                                        <textarea name="message" class="form-control field-message" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="col-12 col-12 m-0 p-2">
+                                        <span class="form-alert"></span>
+                                    </div>
+                                    <div class="col-12 m-0 p-2">
+                                        <a class="btn primary-button">SEND</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="contacts">
+                        <h4>Example Inc.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Praesent diam lacus, dapibus sed imperdiet consectetur.</p>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-phone-alt mr-2"></i>
+                                    +1 (305) 1234-5678
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    hello@example.com
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    Main Avenue, 987
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="mt-2 btn outline-button" data-toggle="modal" data-target="#map">VIEW MAP</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </section>
+</main>

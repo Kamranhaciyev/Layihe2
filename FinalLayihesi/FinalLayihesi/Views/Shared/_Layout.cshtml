@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" />
+    <link rel="stylesheet" href="~/css/animation.min.css">
+    <link rel="stylesheet" href="~/css/gallery.min.css">
+    <link rel="stylesheet" href="~/css/cookie-notice.min.css">
+    <link rel="stylesheet" href="~/css/slider.min.css">
+    <link rel="stylesheet" href="~/css/style2.css">
+    <link rel="stylesheet" href="~/css/second.css">
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+
+    <div id="preloader" data-timeout="2000" class="odd preloader counter">
+        <div data-aos="fade-up" data-aos-delay="500" class="row justify-content-center text-center items">
+            <div data-percent="100" class="radial">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <header id="header">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand navbar-fixed sub">
+            <div class="container header">
+                <a class="navbar-brand" href="/html">
+                    <span class="brand">
+                        <span class="first">NEX</span>
+                        <span class="last">GEN</span>
+                    </span>
+                </a>
+                <div class="ms-auto"></div>
+                <ul class="navbar-nav items">
+                    <li class="nav-item">
+                        <a href="#header" class=" pe-4 nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="About" asp-action="Index" class=" pe-4 nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="partners" asp-action="index" class=" pe-4 nav-link">PARTNERS</a>
+                    </li>
+                    <li class="nav-item about dropdown px-3">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           id="navbarDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            PAGES
+                        </a>
+                        <ul class="dropdown-menu about-ul" aria-labelledby="navbarDropdown">
+                            <li><a asp-controller="Ourpeople" asp-action="index" class="dropdown-item">OUR PEOPLE</a></li>
+                            <li><a asp-controller="Contact" asp-action="index" class="dropdown-item">CONTACT</a></li>
+                            <li><a asp-controller="Partners" asp-action="index" class="dropdown-item">PARTNERS</a></li>
+                            <li><a asp-controller="Testimonials" asp-action="index" class="dropdown-item">TESTIMONIALS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Services" asp-action="index" class=" pe-4 nav-link">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Blog" asp-action="index" class=" pe-4 nav-link">BLOG</a>
+                    </li>
+                </ul>
+
+                <!-- Navbar Toggle -->
+                <ul class="navbar-nav toggle">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#menu">
+                            <i class="icon-menu m-0"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Navbar Action -->
+                <ul class="navbar-nav action">
+                    <li class="nav-item ml-3">
+                        <a href="#contact" class="smooth-anchor btn ms-lg-auto primary-button">GET IN TOUCH</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    @RenderBody()
+    <footer>
+        <section id="footer-first-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <a class="navbar-brand" href="/html">
+                            <span class="brand">
+                                <span class="boxing">
+                                    <span class="first">NEX</span>
+                                </span>
+                                <span class="second">GEN</span>
+                            </span>
+                        </a>
+                        <p>A Functional HTML Template<br>for Corporate & Business.</p>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-phone-alt mr-2"></i>
+                                    +1 (305) 1234-5678
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    hello@exapmle.com
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    Main Avenue, 987
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="mt-4 btn outline-button smooth-anchor">GET IN TOUCH</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-3 item">
+                        <div class="card">
+                            <h4>About</h4>
+                            <a href="#"><i class="fas fa-chevron-right pt-3 pe-2"></i>The Company</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Institutional</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Social & Events</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Innovation</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Environment</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Technology</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 item">
+                        <div class="card">
+                            <h4>Services</h4>
+                            <a href="#"><i class="fas fa-chevron-right pt-3 pe-2"></i>Audit & Assurance</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Financial Advisory</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Analytics M&A</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Middle Marketing</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Legal Consulting</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Regulatory Risk</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 item">
+                        <div class="card">
+                            <h4>Support</h4>
+                            <a href="#"><i class="fas fa-chevron-right pt-3 pe-2"></i>Responsibility</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Terms of Use</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>About Cookies</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Privacy Policy</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Accessibility</a>
+                            <a href="#"><i class="fas fa-chevron-right pe-2"></i>Information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer-second-part" class="odd copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 text-center text-lg-left">
+                        <p>Enjoy the low price. We are tracking any intention of piracy.</p>
+                    </div>
+                    <div class="col-12 col-md-6 text-center text-lg-right">
+                        <p>© 2021 NEXGEN is Proudly Powered by <a href="https://themeforest.net/user/codingsdev" target="_blank">Codings</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="~/js/slider.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery2.js"></script>
+    <script src="~/js/carousel.js"></script>
+    <script src="~/js/animation.min.js"></script>
+    <script src="~/js/progress-radial.min.js"></script>
+    <script src="~/js/bricklayer.min.js"></script>
+    <script src="~/js/gallery.min.js"></script>
+    <script src="~/js/shuffle.min.js"></script>
+    <script src="~/js/cookie-notice.min.js"></script>
+    <script src="~/js/particles.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/header.js"></script>
+    <script src="~/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    @RenderSection("dataFilter", false)
+    @RenderSection("subscribe",false)
+</body>
+</html>
